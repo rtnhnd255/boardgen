@@ -1,0 +1,23 @@
+{
+  "start_date": "2026-11-01",
+  "total_weeks": 26,
+  "quarters_weeks": 13,
+  "buffer_weeks": [13, 26],
+  "total_hours": 260,
+  "page_title": "Мини-роадмап",
+  "subtitle": "пример формата boardgen (docs/SPEC.md)",
+  "chapters": [
+    {"file": "01_foundation.md", "title": "Основы"},
+    {"file": "02_build.md", "title": "Сборка"}
+  ],
+  "streams": {
+    "A": {"label": "Ядро", "color": "#1a365d"},
+    "B": {"label": "Математика", "color": "#00838f"},
+    "C": {"label": "Практика", "color": "#e65100"}
+  },
+  "code_to_stream": {
+    "exact": {},
+    "prefix": {"A": "A", "B": "B", "C": "C"}
+  },
+  "rates": {"A": 6, "B": 2, "C": 2}
+}

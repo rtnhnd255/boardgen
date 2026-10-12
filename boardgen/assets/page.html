@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<title>%%TITLE%%</title>
+<style>
+%%STYLES%%
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="cover">
+<h1>%%TITLE%%</h1>
+<p>%%SUBTITLE%%</p>
+<div class="stat">
+<div><div class="v" id="stat-weeks">&mdash;</div><div class="k">недель</div></div>
+<div><div class="v" id="stat-streams">&mdash;</div><div class="k">потоков</div></div>
+<div><div class="v">%%BLOCK_COUNT%%</div><div class="k">блоков</div></div>
+<div><div class="v" id="progress">0%</div><div class="k">прогресс</div></div>
+</div>
+<div class="pbar"><div class="pbar-fill" id="pbar" style="width:0%"></div></div>
+<div class="toc">%%TOC%%</div>
+</div>
+
+<div class="canvas-wrap">
+<div class="cv-controls">
+<input id="cv-search" placeholder="поиск: код / название… (Enter — переход)">
+<label class="cvc"><input type="checkbox" id="cv-hide-done"> скрыть закрытые</label>
+<label class="cvc"><input type="checkbox" id="cv-crit"> критический путь</label>
+<button id="cv-reset" title="обнулить весь прогресс (localStorage)">⟲ сброс</button>
+</div>
+<canvas id="dep-canvas"></canvas>
+<canvas id="mm-canvas"></canvas>
+<div style="font-size:11px;color:#5a6a7a;margin-top:6px">⚡ жёлтая полоса — буферная неделя квартала (клик — к чек-листу гейта) · двойная рамка узла: внешняя = поток, внутренняя = готовность (🔴 блок / 🟡 готов / 🟢 закрыт)</div>
+<div class="zoom-btns">
+<button onclick="zoomOut()">&minus;</button>
+<button onclick="zoomFit()">Fit</button>
+<button onclick="zoomIn()">+</button>
+</div>
+</div>
+
+<script>window.ROADMAP_META = %%META%%;</script>
+<script>window.BOARD_DATA = %%BOARD_JSON%%;</script>
+
+%%CHAPTERS%%
+
+</div>
+
+<script>
+%%SCRIPTS%%
+</script>
+</body>
+</html>

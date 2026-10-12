@@ -1,0 +1,10 @@
+target-version = "py312"
+line-length = 110
+extend-exclude = ["examples"]
+
+[lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "RET", "PL"]
+ignore = ["PLR0912", "PLR0915", "PLR2004", "E501"]
+
+[format]
+quote-style = "single"
